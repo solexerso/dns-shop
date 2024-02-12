@@ -47,6 +47,71 @@
             В период акции, вы можете приобрести видеокарты по выгодным ценам. 
         </h4>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/B0OhDj5ZNc4?si=AdFJ3RyZ4UvEkP3u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>ЧТО НЕ ТАК С ARDOR GAMING ? Худшая компания в DNS Ардор гейминг по игровым девайсам. ОЧНИТЕСЬ!</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/W9fDptx_tpI?si=Yf3--qE_RgSQjMtJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>КТО ЭТО ПОКУПАЕТ??? Худшие решения для вашего геймерского места, от которых стыдно!</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/rnOh18oF_as?si=iOjoAUPgYBSbX6pj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>ПРОКАЧАЛ ИГРОВОЕ МЕСТО ЗА 1 000 000 рублей ! Апгрейд геймерского/рабочего стола,девайсов, рум тур</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/APTshbDf5mA?si=ROZQLlY4GOtTw8RW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>ХУДШИЕ КОМПАНИИ от которых НЕ СТОИТ покупать девайсы 2023 | Оверпрайс бренды HyperX logitech dxracer</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/aN95AIVJew0?si=dzV-lHf97QTMeUSr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Моя Первая КАСТОМНАЯ Игровая Механическая Клаватура за 23 000. Лучшая в России Dark Project KD83A</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xEhobYa8v_g?si=wzKB5i53rFMWsAq1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>КРУТЫЕ и НЕОБЫЧНЫЕ Игровые Девайсы с Aliexpress и DNS | Akko, Barracuda X, наушники, мышь,клавиатура</h3>
+            </div>
+            <div class="slide">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h4hCv3V4cX4?si=4CAraCpPhgK9qhd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Все Новинки ARDOR GAMING с DNS и Что Такое OEM ? Бюджетный набор геймера Клавиатура, мышка, наушники</h3>
+            </div>
+        </div>
+        <button class="prev">&#60;</button>
+        <button class="next">&#62;</button>
+    </div>
+    <script>
+        // Получаем ссылки на элементы слайдера и кнопки
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        // Инициализируем счетчик слайдов
+        let counter = 0;
+        
+        nextBtn.addEventListener('click', () => { // Добавляем обработчик события "click" для кнопки "вперед"
+            
+            if (counter < 4) { // Проверяем, если счетчик меньше 4 (не последний слайд), то...               
+                counter++; // Увеличиваем счетчик на 1               
+                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Изменяем свойство transform элемента слайдера, чтобы переместить его на следующий слайд
+            } else {                
+                counter = 0; // Если текущий слайд - последний, переходим на первый слайд               
+                slider.style.transform = `translateX(0)`; // Возвращаем слайдер на начальную позицию
+            }
+        });
+
+        prevBtn.addEventListener('click', () => { // Добавляем обработчик события "click" для кнопки "назад"
+            if (counter > 0) { // Проверяем, если счетчик больше 0 (не первый слайд), то...
+                counter--; // Уменьшаем счетчик на 1
+                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Изменяем свойство transform элемента слайдера, чтобы переместить его на предыдущий слайд
+            } else {
+                counter = 4; // Если текущий слайд - первый, переходим на последний слайд
+                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Перемещаем слайдер к последнему слайду
+            }
+        });
+    </script>
+        <br>
         <footer>
             © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.
         </footer>
