@@ -321,3 +321,17 @@ social-icon{
     height: 30px;
     margin: 0 5px;
 }
+#scrollToTopButton{
+    font-family: 'Comic Sans MS', cursive;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
