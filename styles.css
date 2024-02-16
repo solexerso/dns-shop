@@ -304,3 +304,20 @@ footer {
             background: #FF5733; /* Устанавливает цвет фона кнопок при наведении на них */
             color: #FFF; /* Устанавливает цвет текста кнопок при наведении на них */
         }
+.contact-info{
+    text-align: left;
+    padding-left: 20px;
+}
+.contact-info a{
+    color: #FFF;
+    text-decoration: none;
+}
+.social-links{
+    display: flex;
+    justify-content: space-around;
+}
+social-icon{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
