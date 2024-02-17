@@ -44,8 +44,43 @@
         <h3 class="colored-linkb">Веб-камера ARDOR GAMING Oracle AF2M6FA1 <br>Цена: 19 190 ₸</h3>
         <a href="https://www.dns-shop.kz/product/00ecdc5b7541ed20/veb-kamera-ardor-gaming-oracle-af2m6fa1/" target="_blank" class="colored-linkbb">Подробнее</a>
         <br><br><br><br><br><br><br><br><br><br>
+        <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">Наверх</button>
+        <script>
+            window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollBtn").style.display = "none";
+    }
+}
+
+// Function to smoothly scroll back to the top of the document when button is clicked
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+        </script>
         <footer>
-            © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.
+            © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.<hr><br>
+            <div class="colored-link">
+                <a href="https://www.instagram.com/dns_digital/" class="colored-link" target="_blank">Instagram</a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="YouTube" class="social-icon">
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="https://www.youtube.com/@DNS_CLUB" class="colored-link" target="_blank">YouTube</a>
+                    <img src="https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg" alt="YouTube" class="social-icon">
+                </a>
+                </a>
+            </div>
+            <br><br>
+            <div class="contact-info">
+                <p><strong>Контактная информация:</strong></p>
+                <p>Электронная почта: ko-22-267@turan-edu.kz</p>
+                <p>Телефон: <a href="tel:+77762366335">+7 (776) 236 - 63 - 35</a></p>
+                <p>Адрес: Жарокова 286, Алматы, Казахстан</p>
+            </div>
         </footer>
     </body>
 </html>
