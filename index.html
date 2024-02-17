@@ -81,53 +81,64 @@
         <button class="prev">&#60;</button>
         <button class="next">&#62;</button>
     </div>
-        <button id=scrollToTopButton">Наверх</button>button>
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">Наверх</button>
     <script>
-        // Получаем ссылки на элементы слайдера и кнопки
         const slider = document.querySelector('.slider');
         const prevBtn = document.querySelector('.prev');
         const nextBtn = document.querySelector('.next');
 
-        // Инициализируем счетчик слайдов
         let counter = 0;
         
-        nextBtn.addEventListener('click', () => { // Добавляем обработчик события "click" для кнопки "вперед"
+        nextBtn.addEventListener('click', () => {
             
-            if (counter < 4) { // Проверяем, если счетчик меньше 4 (не последний слайд), то...               
-                counter++; // Увеличиваем счетчик на 1               
-                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Изменяем свойство transform элемента слайдера, чтобы переместить его на следующий слайд
+            if (counter < 4) {             
+                counter++;           
+                slider.style.transform = `translateX(${-33.333 * counter}%)`;
             } else {                
-                counter = 0; // Если текущий слайд - последний, переходим на первый слайд               
-                slider.style.transform = `translateX(0)`; // Возвращаем слайдер на начальную позицию
+                counter = 0;            
+                slider.style.transform = `translateX(0)`;
             }
         });
 
-        prevBtn.addEventListener('click', () => { // Добавляем обработчик события "click" для кнопки "назад"
-            if (counter > 0) { // Проверяем, если счетчик больше 0 (не первый слайд), то...
-                counter--; // Уменьшаем счетчик на 1
-                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Изменяем свойство transform элемента слайдера, чтобы переместить его на предыдущий слайд
+        prevBtn.addEventListener('click', () => {
+            if (counter > 0) {
+                counter--;
+                slider.style.transform = `translateX(${-33.333 * counter}%)`; 
             } else {
-                counter = 4; // Если текущий слайд - первый, переходим на последний слайд
-                slider.style.transform = `translateX(${-33.333 * counter}%)`; // Перемещаем слайдер к последнему слайду
+                counter = 4; 
+                slider.style.transform = `translateX(${-33.333 * counter}%)`; 
             }
         });
+        window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrollBtn").style.display = "block";
+    } else {
+        document.getElementById("scrollBtn").style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
     </script>
         <br>
         <footer>
-            © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.
-            <form>
-                <input type="email" placeholder="Введите ваш email" required>
-                <button type="submit">Подписаться<button></button>
-            </form>
-            <div class="social-links">
-                <a href="https://www.youtube.com/@DNS_CLUB" target="_blank">
-                    <img src="youtube.png" alt="YouTube" class="social-icon">
+            © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.<hr><br>
+            <div class="colored-link">
+                <a href="https://www.instagram.com/dns_digital/" class="colored-link" target="_blank">Instagram</a>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="YouTube" class="social-icon">
+                ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="https://www.youtube.com/@DNS_CLUB" class="colored-link" target="_blank">YouTube</a>
+                    <img src="https://img.freepik.com/premium-vector/red-youtube-logo-social-media-logo_197792-1803.jpg" alt="YouTube" class="social-icon">
                 </a>
-                <a href="https://www.instagram.com/dns_digital/" target="_blank">
-                    <img src="instagram.png" alt="Instagram" class="social-icon">
                 </a>
             </div>
-            <div class="contact-info>
+            <br><br>
+            <div class="contact-info">
                 <p><strong>Контактная информация:</strong></p>
                 <p>Электронная почта: ko-22-267@turan-edu.kz</p>
                 <p>Телефон: <a href="tel:+77762366335">+7 (776) 236 - 63 - 35</a></p>
