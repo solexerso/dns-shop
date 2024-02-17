@@ -267,42 +267,41 @@ footer {
     transform: scale(1.1); 
 }
 .slider-container {
-            position: relative; /* Относительное позиционирование для слайдера */
+            position: relative;
         }
         .slider-container .slider {
-            display: flex; /* Устанавливает флексбокс для слайдера */
-            transition: transform 0.5s ease; /* Добавляет плавный переход при изменении положения слайдов */
+            display: flex;
+            transition: transform 0.5s ease;
         }
         .slider-container .slide {
-            flex: 0 0 33.333%; /* Устанавливает равную ширину для каждого слайда */
-            text-align: center; /* Выравнивает содержимое слайда по центру */
+            flex: 0 0 33.333%;
+            text-align: center;
         }
         .slider-container .prev,
         .slider-container .next {
-            position: absolute; /* Устанавливает абсолютное позиционирование для кнопок */
-            top: 50%; /* Размещает кнопки по вертикали на 50% относительно родительского элемента */
-            transform: translateY(-50%); /* Смещает кнопки на половину их собственной высоты вверх, чтобы центрировать их по вертикали */
-            background: rgba(255, 255, 255, 0.8); /* Устанавливает полупрозрачный белый цвет фона кнопок */
-            border: 2px solid #FF5733; /* Устанавливает границу кнопок с толщиной 2 пикселя и цветом #FF5733 */
-            color: #FF5733; /* Устанавливает цвет текста кнопок */
-            font-size: 20px; /* Устанавливает размер шрифта кнопок */
-            cursor: pointer; /* Устанавливает стандартный курсор указателя при наведении на кнопки */
-            z-index: 1; /* Устанавливает порядок наложения кнопок над другими элементами */
-            padding: 10px 20px; /* Устанавливает внутренние отступы для кнопок по вертикали 10 пикселей и по горизонтали 20 пикселей */
-            transition: background 0.3s, color 0.3s; /* Добавляет плавный переход для изменения цвета фона и текста кнопок */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #FF5733;
+            color: #FF5733;
+            cursor: pointer;
+            z-index: 1;
+            padding: 10px 20px;
+            transition: background 0.3s, color 0.3s;
             border-radius: 15px;
             box-shadow: 0 0 30px black;
         }
         .slider-container .prev {
-            left: 10px; /* Размещает кнопку "назад" с отступом 10 пикселей от левого края слайдера */
+            left: 10px;
         }
         .slider-container .next {
-            right: 10px; /* Размещает кнопку "вперед" с отступом 10 пикселей от правого края слайдера */
+            right: 10px;
         }
         .slider-container .prev:hover,
         .slider-container .next:hover {
-            background: #FF5733; /* Устанавливает цвет фона кнопок при наведении на них */
-            color: #FFF; /* Устанавливает цвет текста кнопок при наведении на них */
+            background: #FF5733;
+            color: #FFF;
         }
 .contact-info{
     text-align: left;
@@ -316,22 +315,28 @@ footer {
     display: flex;
     justify-content: space-around;
 }
-social-icon{
+.social-icon{
     width: 30px;
     height: 30px;
     margin: 0 5px;
+    border-radius: 50px;
 }
-#scrollToTopButton{
-    font-family: 'Comic Sans MS', cursive;
+#scrollBtn {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #FF5733;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
+    z-index: 99;
     font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #ff5e00;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15%;
+    box-shadow: 0 0 10px black;
+}
+#scrollBtn:hover {
+    background-color: #ff6600;
 }
