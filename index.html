@@ -19,6 +19,7 @@
         </h2>
     </header>
     <body>
+        <canvas id="snowfall"></canvas>
         <br><br>
         <div class="container">
         <img src="https://c.dns-shop.ru/thumb/st4/crop/344/244/c0fa9efeb924c2da9214a51c0613f822/e13096d3791ed25e8c677da6a495404b66e9cfa419aa5e499989cc60c85cbebd.jpg.webp" class="img">
@@ -125,6 +126,59 @@ function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+const canvas = document.getElementById('snowfall');
+const ctx = canvas.getContent('2d');
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        const snowflakes = [];
+        const numberOfSnowflakes = 250;
+        function generateSnowflakes() {
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                snowflakes.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    radius: Math.random() * 3 + 1,
+                    speed: Math.random() + 0.5
+                });
+            }
+        }
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, width, heist);
+            ctx.fillStyle = '#FFF';
+            ctx.beginPath();
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = snowflakes[i];
+                ctx.moveTo(snowflake.x, snowflake.y);
+                ctx.arc(snowflake.x, snowflake.y, snowflake.radius, 0, Math.PI * 2, true);
+            }
+            ctx.fill();
+            moveSnowflakes();
+        }
+        function moveSnowflakes() {
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = snowflakes [i];
+                snowflake.y += snowflake.speed;
+                if (snowflake.y > height) {
+                    snowflake.y = -5;
+                }
+            }
+        }
+        function animateSnowflakes() {
+            drawSnowflakes();
+            requestAnimationFrame(animateSnowflakes);
+        }
+        generateSnowflakes();
+        animateSnowflakes();
+        window.addEventListener('resize', function() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            snowflakes.length = 0;
+            generateSnowflakes();
+        });
     </script>
         <br>
         <footer>
