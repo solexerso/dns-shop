@@ -179,6 +179,12 @@ const ctx = canvas.getContext('2d');
             snowflakes.length = 0;
             generateSnowflakes();
         });
+        function parallaxScroll() {
+            const header = document.querySelector('header');
+            const scrolled = window.pageOffset;
+            header.style.backgroundPositionY = -(scrolled * 0.3) + 'px';
+        }
+        window.addEventListener('scroll', parallaxScroll);
     </script>
         <br>
         <footer>
