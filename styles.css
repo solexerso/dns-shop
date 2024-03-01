@@ -7,7 +7,7 @@ header{
     box-shadow: 0 0px 30px rgb(0, 0, 0);
     font-family: 'lemonmilk.ttf', sans-serif;
     user-select: none;
-    display: fixed;
+    position: fixed;
 }
 .colored-link{
     color:white;
