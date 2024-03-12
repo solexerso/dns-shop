@@ -209,17 +209,6 @@ const ctx = canvas.getContext('2d');
         }
     });
 });
-document.addEventListener('DOMContentLoaded', function () {    const themeToggle = document.getElementById('themeToggle');
-    // Проверка текущей темы при загрузке страницы
-    if (localStorage.getItem('theme') === 'dark') {        document.body.classList.add('dark-theme');
-        themeToggle.checked = true;    } else {
-        document.body.classList.add('light-theme');    }
-    // Обработчик события для переключения темы
-    themeToggle.addEventListener('change', function () {        if (this.checked) {
-            document.body.classList.replace('light-theme', 'dark-theme');            localStorage.setItem('theme', 'dark');
-        } else {            document.body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light');        }
-    });});
     </script>
         <br>
         <footer>
