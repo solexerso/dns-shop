@@ -13,9 +13,9 @@
         <h2>
             DNS - Наши клиенты – в центре всего, что мы делаем.
         </h2>
-        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn">Найти</button></center></h1>
+        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn-hover color-2">Найти</button></center></h1>
         <h2>
-        <a href="index.html" class="colored-link">Главная</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexour.html" class="colored-link">О нас</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexassort.html" class="colored-link">Ассортимент</a>
+            <button id="btn-hover color-2" class="btn-hover color-2">Главная</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-3" class="btn-hover color-2">О нас</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-4" class="btn-hover color-2">Ассортимент</button>
         </h2>
     </header>
     <body>
@@ -36,7 +36,15 @@
         <center><img src="https://c.dns-shop.kz/thumb/st4/fit/500/500/53da3e47a7977cb367f7653d93f9f929/1959836ba03256c5cde8073fc687f659b53d87ebbaa77af31d142df5d2ab407b.png.webp" class="imgaa"></center>
         <h3 class="colored-linkb">15.6" Ноутбук ASUS ROG Strix G15 G513RS-HQ040W черный <br>Цена: 1 199 990 ₸</h3>
         <a href="https://www.dns-shop.kz/product/b07fbdf98a96118a/156-noutbuk-asus-rog-strix-g15-g513rs-hq040w-cernyj/" target="_blank" class="colored-linkbb">Подробнее</a>
-        <br><br><br><br><br><br><br><br><hr><br>
+        <br><br><br><br><br><br><br><br><hr><br><br>
+        <center><img src="https://c.dns-shop.kz/thumb/st4/fit/320/250/7b0704172fc1b18516bcde05b3c17c63/d3efb1cc94e705ada464be79261858fe60792af13ea3b5bd26fca2219eedca36.jpg" class="imga"></center>
+        <h3 class="colored-linkb">15.6" Ноутбук Acer Extensa 15 EX215-22-R5NC черный <br>Цена: 179 990 ₸</h3>
+        <a href="https://www.dns-shop.kz/product/1e24a743aedb2eb0/156-noutbuk-acer-extensa-15-ex215-22-r5nc-cernyj/" target="_blank" class="colored-linkbb">Подробнее</a>
+        <br><br><br><br><br><br><hr><br>
+        <center><img src="https://c.dns-shop.kz/thumb/st4/fit/320/250/4ed1d7fc8d8af3518856dff7d9929527/23a4f421007faf84f8365f996778d85e307a76548e5d3498e7c93e08634a5c21.jpg" class="imgpd"></center>
+        <h3 class="colored-linkb">15.6" Ноутбук Lenovo IdeaPad Gaming 3 15ACH6 черный <br>Цена: 360 990 ₸</h3>
+        <a href="https://www.dns-shop.kz/product/859a337a13c3bc91/156-noutbuk-lenovo-ideapad-gaming-3-15ach6-cernyj/" target="_blank" class="colored-linkbb">Подробнее</a>
+        <br><br><br><br><br><br><hr><br>
         <center><img src="https://c.dns-shop.kz/thumb/st4/fit/500/500/30080cd9c73b6890c53abaf52441eedb/5e2bd8486a6d5bc53030b286c95bbd55399de28a9b2e25fc1245586c6ad4d99f.jpg.webp" class="imgkv"></center>
         <h3 class="colored-linkb">17" Сумка Aceline Oxf-LG-24 <br>Цена: 5 590 ₸</h3>
         <a href="https://www.dns-shop.kz/product/e7ea90a1add3ed20/17-sumka-aceline-oxf-lg-24/" target="_blank" class="colored-linkbb">Подробнее</a>
@@ -117,6 +125,30 @@ const ctx = canvas.getContext('2d');
             snowflakes.length = 0;
             generateSnowflakes();
         });
+                           // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-2");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "index.html";
+});
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-3");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexour.html";
+});
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-4");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexassort.html";
+});
         </script>
         <footer>
             © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.<hr><br>
