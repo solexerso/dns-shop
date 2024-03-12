@@ -9,32 +9,30 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <header>
+        <audio src="softcore.mp3"></audio>
         <h2>
             DNS - Наши клиенты – в центре всего, что мы делаем.
         </h2>
-        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn">Найти</button></center></h1>
+        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn-hover color-2">Найти</button></center></h1>
         <h2>
-        <a href="index.html" class="colored-link">Главная</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexour.html" class="colored-link">О нас</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexassort.html" class="colored-link">Ассортимент</a><br><br>
-            <input type="checkbox" id="themeToggle"> 
-<label for="themeToggle">Темная тема</label>
-
+            <button id="btn-hover color-2" class="btn-hover color-2">Главная</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-3" class="btn-hover color-2">О нас</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-4" class="btn-hover color-2">Ассортимент</button>
         </h2>
     </header>
     <body>
         <canvas id="snowfall"></canvas>
-        <br><br><br><br><br><br>
+        <br><br>
         <div class="container">
-        <img src="https://c.dns-shop.ru/thumb/st4/crop/344/244/c0fa9efeb924c2da9214a51c0613f822/e13096d3791ed25e8c677da6a495404b66e9cfa419aa5e499989cc60c85cbebd.jpg.webp" class="img">
+        <img src="https://c.dns-shop.kz/thumb/st4/crop/344/244/3402847d34f555f0966809619f9a2c6e/8bce5b5045d30236497c3ff389a42c28aeb9279bc73bfe71b3bc40b425b9b3a0.jpg.webp" class="img">
         <h2>
-            Скидка при онлайн-оплате на видеотехнику и периферию!
+            Для неё!
         </h2>
         <h3>
-            с 9 февраля по 10 марта 2024 года.
+            с 1 по 10 марта 2024 года
         </h3>
         </div>
         <hr>
         <h4>
-            Оплачивайте покупку видеотехники и переферии онлайн и получайте скидки.
+            Привлекательные цены на большинство товаров магазина!
         </h4>
         <br><br><br><br><br><br><br><br><br>
         <img src="https://c.dns-shop.ru/thumb/st4/crop/344/244/94c08a0103d7de13a105d76afa9c07d8/675ba8e728e26efd29d7723d3ad1071c258d903b0d451c5a0a2afef0196d245b.png.webp" class="img">
@@ -48,6 +46,19 @@
         <hr>
         <h4>
             В период акции, вы можете приобрести видеокарты по выгодным ценам. 
+        </h4>
+        <br><br><br><br><br><br><br><br><br>
+        <img src="https://c.dns-shop.ru/thumb/st4/crop/344/244/c0fa9efeb924c2da9214a51c0613f822/e13096d3791ed25e8c677da6a495404b66e9cfa419aa5e499989cc60c85cbebd.jpg.webp" class="img">
+        <h2>
+            Скидка при онлайн-оплате на видеотехнику и периферию!
+        </h2>
+        <h3>
+            с 9 февраля по 10 марта 2024 года.
+        </h3>
+        </div>
+        <hr>
+        <h4>
+            Оплачивайте покупку видеотехники и переферии онлайн и получайте скидки.
         </h4>
         <br><br><br><br><br><br><br><br><br>
         <div class="slider-container">
@@ -181,34 +192,41 @@ const ctx = canvas.getContext('2d');
             snowflakes.length = 0;
             generateSnowflakes();
         });
-        function parallaxScroll() {
-            const header = document.querySelector('header');
-            const scrolled = window.pageOffset;
-            header.style.backgroundPositionY = -(scrolled * 0.3) + 'px';
-        }
-        window.addEventListener('scroll', parallaxScroll);
-        document.addEventListener('DOMContentLoaded', function () {
-    const themeToggle = document.getElementById('themeToggle');
+                           // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-2");
 
-    // Проверка текущей темы при загрузке страницы
-    if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeToggle.checked = true;
-    } else {
-        document.body.classList.add('light-theme');
-    }
-
-    // Обработчик события для переключения темы
-    themeToggle.addEventListener('change', function () {
-        if (this.checked) {
-            document.body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light');
-        }
-    });
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "index.html";
 });
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-3");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexour.html";
+});
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-4");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexassort.html";
+});
+document.addEventListener('DOMContentLoaded', function () {    const themeToggle = document.getElementById('themeToggle');
+    // Проверка текущей темы при загрузке страницы
+    if (localStorage.getItem('theme') === 'dark') {        document.body.classList.add('dark-theme');
+        themeToggle.checked = true;    } else {
+        document.body.classList.add('light-theme');    }
+    // Обработчик события для переключения темы
+    themeToggle.addEventListener('change', function () {        if (this.checked) {
+            document.body.classList.replace('light-theme', 'dark-theme');            localStorage.setItem('theme', 'dark');
+        } else {            document.body.classList.replace('dark-theme', 'light-theme');
+            localStorage.setItem('theme', 'light');        }
+    });});
     </script>
         <br>
         <footer>
@@ -227,6 +245,9 @@ const ctx = canvas.getContext('2d');
                 <p>Электронная почта: ko-22-267@turan-edu.kz</p>
                 <p>Телефон: <a href="tel:+77762366335">+7 (776) 236 - 63 - 35</a></p>
                 <p>Адрес: Жарокова 286, Алматы, Казахстан</p>
+                <br>
+                <input type="checkbox" id="themeToggle"> 
+                <label for="themeToggle">Темная тема</label>
             </div>
         </footer>
     </body>
