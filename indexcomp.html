@@ -13,9 +13,9 @@
         <h2>
             DNS - Наши клиенты – в центре всего, что мы делаем.
         </h2>
-        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn">Найти</button></center></h1>
+        <h1><center><input type="text" class="search-input" placeholder="Введите запрос"><button class="btn-hover color-2">Найти</button></center></h1>
         <h2>
-        <a href="index.html" class="colored-link">Главная</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexour.html" class="colored-link">О нас</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<a href="indexassort.html" class="colored-link">Ассортимент</a>
+            <button id="btn-hover color-2" class="btn-hover color-2">Главная</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-3" class="btn-hover color-2">О нас</button>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<button id="btn-hover color-4" class="btn-hover color-2">Ассортимент</button>
         </h2>
     </header>
     <body>
@@ -116,6 +116,30 @@ const ctx = canvas.getContext('2d');
             canvas.height = height;
             snowflakes.length = 0;
             generateSnowflakes();
+                               // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-2");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "index.html";
+});
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-3");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexour.html";
+});
+                   // Получаем ссылку и кнопку по идентификатору
+var button = document.getElementById("btn-hover color-4");
+
+// Добавляем обработчик события на клик
+button.addEventListener("click", function() {
+    // Перенаправляем пользователя по ссылке
+    window.location.href = "indexassort.html";
+});
         });
         </script>
         <footer>
