@@ -227,6 +227,15 @@ document.addEventListener('DOMContentLoaded', function () {    const themeToggle
         } else {            document.body.classList.replace('dark-theme', 'light-theme');
             localStorage.setItem('theme', 'light');        }
     });});
+    const whatsappButton = document.querySelector('.whatsapp-button');
+    function changeButtonSize(){
+        whatsappButton.style.transition = 'all 1s ease-in-out';
+        const currentSize = parsefloat(getComputedStyle(whatsappButton).width);
+        const newSize = currentSize === 150 ? 100 : 150;
+        whatsappButton.style.width = newSize + 'px';
+        whatsappButton.style.height = newSize + 'px';
+    }
+    setInterval(changeButtonSize, 2000);
     </script>
         <br>
         <div id="whatsapp-block' class="whatsapp-block">
