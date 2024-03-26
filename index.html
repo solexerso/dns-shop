@@ -7,8 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="https://www.tkchocolate.ru/upload/information_system_1/2/5/6/item_256/item_256.png">
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.6/dist/simplebar.css">
-        <script src="https://unpkg.com/simplebar@5.3.6/dist/simplebar.js">
     </head>
     <header>
         <audio src="softcore.mp3"></audio>
@@ -92,19 +90,6 @@
             <div class="slide">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/h4hCv3V4cX4?si=4CAraCpPhgK9qhd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>Все Новинки ARDOR GAMING с DNS и Что Такое OEM ? Бюджетный набор геймера Клавиатура, мышка, наушники</h3>
-            </div>
-        </div>
-        <div class="seasonal-ingredients">
-            <h2>Сезонные ингредиенты</h2>
-            <p>Узнайте, какие ингредиенты находятся в сезоне, чтобы готовить сезонные и вкусные блюда.</p>
-            <div class="simplebar scrollable-container">
-            <ul>
-                <li>
-                    <h3>Весна</h3>
-                    <img class="season-image" src="https://www.president.gov.ua/storage/j-image-storage/24/66/41/60f9203b8e06eda4ae64a25a5d15b3f3_1652966786_extra_large.jpeg" alt="Весна">
-                    <p>Весной вам доступны свежие артишоки, горошек, зеленый спарж, клубника и другие ингредиенты. Используйте их в весенних салатах.</p>
-                </li>
-            </ul>
             </div>
         </div>
         <button class="prev">&#60;</button>
@@ -242,29 +227,8 @@ document.addEventListener('DOMContentLoaded', function () {    const themeToggle
         } else {            document.body.classList.replace('dark-theme', 'light-theme');
             localStorage.setItem('theme', 'light');        }
     });});
-    const whatsappButton = document.querySelector('.whatsapp-button');
-    function changeButtonSize(){
-        whatsappButton.style.transition = 'all 1s ease-in-out';
-        const currentSize = parsefloat(getComputedStyle(whatsappButton).width);
-        const newSize = currentSize === 150 ? 100 : 150;
-        whatsappButton.style.width = newSize + 'px';
-        whatsappButton.style.height = newSize + 'px';
-    }
-    setInterval(changeButtonSize, 2000);
-        new SimpleBar(document.querySelector('.simplebar'));
-        const seasonalItems = document.querySelectorAll('.seasonal-ingredients li');
-        seasonalItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                item.classList.toggle('active');
-            });
-        });
     </script>
         <br>
-        <div id="whatsapp-block" class="whatsapp-block">
-            <a href="https://api.whatsapp.com/send?phone=877762366335">
-                <button class="whatsapp-button">Написать нам</button>
-            </a>
-        </div>
         <footer>
             © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.<hr><br>
             <div class="colored-link">
