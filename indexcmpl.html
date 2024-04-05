@@ -149,6 +149,23 @@ button.addEventListener("click", function() {
     // Перенаправляем пользователя по ссылке
     window.location.href = "indexassort.html";
 });
+function applyFilter() {
+    var filterSoup = document.getElementById('filterSoup').checked;
+    var filterSalad = document.getElementById('filterSalad').checked;
+    var filterMainCourse = document.getElementById('filterMainCourse').checked;
+    var recipes = document.querySelectorAll('.recipe');
+    for (var i = 0; i < recipes.length; i++) {
+        var recipe = recipes[i];
+        var category = recipe.dataset.category;
+        if ((filterSoup && category === 'soup') ||
+            (filterSalad && category === 'salad') ||
+            (filterMainCourse && category === 'main')) {
+            recipe.style.display='';
+        } else {
+            resipe.style.display = 'none';
+        }
+    }
+}
         </script>
         <footer>
             © 2002–2024 Компания DNS. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.<hr><br>
