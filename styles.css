@@ -509,3 +509,18 @@ canvas#snowfall{
 .filter-button:hover{
     background-color: #FF5733;
 }
+.buttonlike{
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.sumlike{
+    color: rgb(255, 123, 0);
+    font-weight: bold;
+    margin-top: 5px;
+}
