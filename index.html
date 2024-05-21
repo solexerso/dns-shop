@@ -34,6 +34,10 @@
         <h4>
             Привлекательные цены на большинство товаров магазина!
         </h4>
+        <button id="likeButton">Лайк</button>
+        <button id="dislikeButton">Дизлайк</button>
+        <p id="likesCount">0</p>
+        <p id="dislikesCount">0</p>
         <br><br><br><br><br><br><br><br><br>
         <img src="https://c.dns-shop.ru/thumb/st4/crop/344/244/94c08a0103d7de13a105d76afa9c07d8/675ba8e728e26efd29d7723d3ad1071c258d903b0d451c5a0a2afef0196d245b.png.webp" class="img">
         <h2>
@@ -227,6 +231,14 @@ document.addEventListener('DOMContentLoaded', function () {    const themeToggle
         } else {            document.body.classList.replace('dark-theme', 'light-theme');
             localStorage.setItem('theme', 'light');        }
     });});
+    document.getElementById("likeButton").addEventListener("click", () => {
+            // Отправляем запрос на сервер для добавления лайка
+            // Обновляем счетчик лайков
+        });
+
+        document.getElementById("dislikeButton").addEventListener("click", () => {
+            // Отправляем запрос на сервер для добавления дизлайка
+            // Обновляем счетчик дизлайков
     </script>
         <br>
         <footer>
