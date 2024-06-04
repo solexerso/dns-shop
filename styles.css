@@ -528,4 +528,6 @@ canvas#snowfall{
     color: rgb(223, 118, 21);
     font-family: 'lemonmilk.ttf', sans-serif;
     user-select: none;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
 }
