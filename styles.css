@@ -524,3 +524,8 @@ canvas#snowfall{
     font-weight: bold;
     margin-top: 5px;
 }
+.solexer{
+    color: rgb(223, 118, 21);
+    font-family: 'lemonmilk.ttf', sans-serif;
+    user-select: none;
+}
